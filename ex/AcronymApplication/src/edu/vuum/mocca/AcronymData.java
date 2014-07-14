@@ -1,8 +1,11 @@
 package edu.vuum.mocca;
 
+<<<<<<< HEAD
 import org.json.JSONException;
 import org.json.JSONObject;
 
+=======
+>>>>>>> upstream/master
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -31,18 +34,27 @@ public class AcronymData implements Parcelable {
     /**
      * The long form of the acronym (spelled out version).
      */
+<<<<<<< HEAD
     String mLongForm;
+=======
+    public String mLongForm;
+>>>>>>> upstream/master
 
     /**
      * The relative frequency of usage in print, of this meaning of
      * the acronym.
      */
+<<<<<<< HEAD
     int mFreq;
+=======
+    public int mFreq;
+>>>>>>> upstream/master
 
     /**
      * The year the acronym was added to this database of acronyms, or
      * was originally termed.
      */
+<<<<<<< HEAD
     int mSince;
 
     /**
@@ -53,6 +65,28 @@ public class AcronymData implements Parcelable {
         mLongForm = jsonObject.getString("lf");
         mFreq = jsonObject.getInt("freq");
         mSince = jsonObject.getInt("since");
+=======
+    public int mSince;
+
+    /**
+     * Private constructor provided for the CREATOR interface, which
+     * is used to de-marshal an AcronymData from the Parcel of data.
+     */
+    private AcronymData(Parcel in) {
+        mLongForm = in.readString();
+        mFreq = in.readInt();
+        mSince = in.readInt();
+    }
+
+    /**
+     * Constructor that initializes an AcronymData object from
+     * its parameters.
+     */
+    public AcronymData(String longForm, int freq, int since) {
+        mLongForm = longForm;
+        mFreq = freq;
+        mSince = since;
+>>>>>>> upstream/master
     }
 
     /**
@@ -95,6 +129,7 @@ public class AcronymData implements Parcelable {
     }
 
     /**
+<<<<<<< HEAD
      * Private Constructor for use by CREATOR interface, which is used
      * to de-marshal an AcronymData from the Parcel of data.
      */
@@ -105,6 +140,8 @@ public class AcronymData implements Parcelable {
     }
 
     /**
+=======
+>>>>>>> upstream/master
      * public Parcelable.Creator for AcronymData, which is an
      * interface that must be implemented and provided as a public
      * CREATOR field that generates instances of your Parcelable class

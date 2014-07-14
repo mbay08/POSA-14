@@ -26,7 +26,13 @@
         </activity>
 
         <service android:name="AcronymServiceAsync"
+<<<<<<< HEAD
                  android:process=":my_process"/>
+=======
+                 android:process=":my_process_async"/>
+        <service android:name="AcronymServiceSync"
+                 android:process=":my_process_sync"/>
+>>>>>>> upstream/master
     </application>
 
 </manifest>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>W8-A7-ThreadedDownloads-BoundServices</name>
+=======
+	<name>W8-A7-ThreadedDownloads-BoundServices-Grading</name>
+>>>>>>> upstream/master
 	<comment></comment>
 	<projects>
 	</projects>

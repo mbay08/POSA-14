@@ -4,7 +4,12 @@ import edu.vuum.mocca.AcronymResults;
 
 /**
  * Interface defining the method that the AcronymServiceAsync will
+<<<<<<< HEAD
  * implement to provide access to the Acronym Web service.
+=======
+ * implement to provide asynchronous access to the Acronym Web
+ * service.
+>>>>>>> upstream/master
  */
 interface AcronymRequest {
    /**

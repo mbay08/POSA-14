@@ -33,12 +33,27 @@ public class UniqueIDGeneratorActivity extends Activity {
     private TextView mOutput;
 
     /**
+<<<<<<< HEAD
      * Reference to the Messenger that's implemented in the
+=======
+     * Reference to the request Messenger that's implemented in the
+>>>>>>> upstream/master
      * UniqueIDGeneratorService.
      */
     private Messenger mReqMessengerRef = null;
 
     /**
+<<<<<<< HEAD
+=======
+     * Reference to the ReplyMessenger that's passed to the
+     * UniqueIDGeneratorService and used to process replies from the
+     * Service.
+     */
+    private Messenger mReplyMessenger =
+        new Messenger(new ReplyHandler());
+
+    /**
+>>>>>>> upstream/master
      * @class ReplyHandler
      *
      * @brief Receives the reply from the UniqueIDGeneratorService, which
@@ -50,7 +65,12 @@ public class UniqueIDGeneratorActivity extends Activity {
          */
         public void handleMessage(Message reply) {
             // Get the unique ID encapsulated in reply Message.
+<<<<<<< HEAD
             String uniqueID = UniqueIDGeneratorService.uniqueID(reply);
+=======
+            String uniqueID =
+                UniqueIDGeneratorService.uniqueID(reply);
+>>>>>>> upstream/master
 
             Log.d(TAG, "received unique ID " + uniqueID);
 
@@ -112,7 +132,11 @@ public class UniqueIDGeneratorActivity extends Activity {
         // send the reply back to ReplyHandler encapsulated by the
         // Messenger.
         Message request = Message.obtain();
+<<<<<<< HEAD
         request.replyTo = new Messenger(new ReplyHandler());
+=======
+        request.replyTo = mReplyMessenger;
+>>>>>>> upstream/master
         
         try {
             if (mReqMessengerRef != null) {
